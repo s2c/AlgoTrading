@@ -1,5 +1,4 @@
-import datetime
-
+from datetime import date, datetime
 #from pandas.io import data
 import pandas as pd
 from pyalgotrade import strategy
@@ -97,17 +96,21 @@ class DataFrameBarFeed(barfeed.BaseBarFeed):
 #                 bar.getAdjClose(),
 #                 bar.getVolume(),
 #             ))
+def DataFrameDateFilter(dataframe,start,end):
+    return(dataframe.loc[start:end])
 
 
 # def main():
 #     inst = 'SP500'
-#     data = pd.read_csv('../Data/GSPC_1m.csv', index_col=2, parse_dates=True,sep=';',decimal=',')
+#     data = pd.read_csv('../../Data/GSPC_1m.csv', index_col=2, parse_dates=True,sep=';',decimal=',')
 #     data.drop(data.columns[[0,1]], axis=1, inplace=True)
 #     data = data.reindex(data.index.rename('Date Time'))
-#     feed = DataFrameBarFeed(dataframe=data, instrument=inst, frequency=barfeed.Frequency.MINUTE,barsHaveAdj=False)
-#     myStrategy = MyStrategy(feed)
-#     myStrategy.run()
+#     data = DataFrameDateFilter(data,date(2013,3,13), date(2013,3,14))
+#     print data.head()
+#     # feed = DataFrameBarFeed(dataframe=data, instrument=inst, frequency=barfeed.Frequency.MINUTE,barsHaveAdj=False)
+#     #myStrategy = MyStrategy(feed)
+#     #myStrategy.run()
 
-
-# if __name__ == "__main__":
-#     main()
+# # __name__= 'main'
+# # if __name__ == 'main':
+# main()
