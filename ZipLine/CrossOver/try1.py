@@ -21,8 +21,8 @@ import pyexcel
 # print panel["SP500"].head()
 
 # Load data manually from Yahoo! finance
-start = datetime(2013, 1, 1, 0, 0, 0, 0, pytz.utc).date()
-end = datetime(201z,1,1,0,0,0,0, pytz.utc).date()
+# start = datetime(2013, 1, 1, 0, 0, 0, 0, pytz.utc).date()
+# end = datetime(201z,1,1,0,0,0,0, pytz.utc).date()
  
 # data = load_bars_from_yahoo(stocks=['SPY'], start=start,end=end)
 
